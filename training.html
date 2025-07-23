@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Town Side Soccer Club</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-image left">
+      <img id="left-banner" src="images/left1.png" alt="Left Banner" />
+      <div class="info">
+        <div id="left-name">Coach Name</div>
+        <div id="left-role">Role</div>
+      </div>
+      <button onclick="prevSlide('left')">❮</button>
+      <button onclick="nextSlide('left')">❯</button>
+    </div>
+    <div class="club-title">
+      <img src="images/logo1.png" alt="Club Logo" class="logo-circle" />
+      <h1>Town Side Soccer Club</h1>
+      <p>Reengus, Sikar (Rajasthan)</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="training.html">Training</a>
+        <a href="events.html">Events</a>
+        <a href="join.html">Join</a>
+      </nav>
+    </div>
+    <div class="header-image right">
+      <img id="right-banner" src="images/right1.png" alt="Right Banner"/>
+      <div class="info">
+        <div id="right-name">Player Name</div>
+        <div id="right-role">Position</div>
+      </div>
+      <button onclick="prevSlide('right')">❮</button>
+      <button onclick="nextSlide('right')">❯</button>
+    </div>
+  </header>
+
+  <section class="content-section training-section">
+     <h2>Our Training Program</h2>
+  <p>
+    At Town Side Soccer Club, we offer a structured, age-appropriate training program designed to build technical skills, tactical understanding, fitness, and teamwork. Whether you're a beginner or a competitive youth player, our training caters to all levels through personalized coaching and guided drills.
+  </p>
+
+  <h3>⚽ Age Groups & Categories</h3>
+  <ul style="text-align: left; max-width: 700px; margin: auto;">
+    <li><strong>Under-10 (U-10):</strong> Basic ball control, dribbling, and fun games to develop love for the sport.</li>
+    <li><strong>Under-13 (U-13):</strong> Focus on passing, movement, and small-sided games to improve decision making.</li>
+    <li><strong>Under-16 (U-16):</strong> Tactical awareness, team formations, positional training, and match simulation.</li>
+    <li><strong>Open Age Group:</strong> Competitive training for teens and young adults preparing for tournaments.</li>
+  </ul>
+
+  <h3>⏰ Weekly Schedule</h3>
+  <table style="margin: 20px auto; border-collapse: collapse; width: 90%; max-width: 700px; color: #fff; background-color: rgba(0,0,0,0.5);">
+    <thead>
+      <tr style="background-color: #004d00;">
+        <th style="padding: 10px; border: 1px solid #fff;">Day</th>
+        <th style="padding: 10px; border: 1px solid #fff;">Time</th>
+        <th style="padding: 10px; border: 1px solid #fff;">Age Group</th>
+        <th style="padding: 10px; border: 1px solid #fff;">Activity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 8px; border: 1px solid #fff;">Monday</td>
+        <td>4:30 PM – 6:00 PM</td>
+        <td>U-10, U-13</td>
+        <td>Ball control, dribbling drills</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>4:30 PM – 6:30 PM</td>
+        <td>U-16, Open</td>
+        <td>Fitness training, tactical play</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>4:30 PM – 6:00 PM</td>
+        <td>U-10, U-13</td>
+        <td>Passing games, small-sided matches</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>4:30 PM – 6:30 PM</td>
+        <td>U-16, Open</td>
+        <td>Formations, pressing drills</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>4:30 PM – 6:00 PM</td>
+        <td>All Groups</td>
+        <td>Skill challenges, shooting practice</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>Morning Matches</td>
+        <td>All Players</td>
+        <td>Matchday or internal tournaments</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>🧠 Coaching Focus</h3>
+  <p>
+    Our coaching approach emphasizes discipline, effort, and teamwork. Players are guided to build confidence, improve decision-making on the field, and grow mentally and emotionally through structured feedback. We encourage fair play, respect, and personal growth alongside football development.
+  </p>
+
+  <h3>👟 Special Training Clinics</h3>
+  <ul style="text-align: left; max-width: 700px; margin: auto;">
+    <li><strong>Goalkeeper Training:</strong> Weekly focus sessions for reflex, handling, and positioning.</li>
+    <li><strong>Girls’ Football Camp:</strong> Weekend clinics to support and empower young female athletes.</li>
+    <li><strong>Summer Intensive Camp:</strong> Seasonal camps with external coaches and guest mentors.</li>
+  </ul>
+
+  </section>
+
+  <footer>&copy; 2025 Town Side Soccer Club</footer>
+
+  <!-- Reuse the same script for sliders -->
+  <script>
+    const imageSets = {
+      left: [
+      { img: "left1.png", name: "Rakesh Yadav", role: "Head Coach" },
+      { img: "left2.png", name: "Anup Yadav", role: "Fitness Trainer" },
+      { img: "left3.png", name: "Pankaj Kumawat", role: "Asst. Coach" },
+      { img: "left4.png", name: "Mukesh Yadav", role: "Managing Director" }
+    ],
+    right: [
+      { img: "right1.png", name: "Gaurav", role: "Captain (CAM)" },
+      { img: "right2.png", name: "Deepak Jr", role: "Midfielder (WF)" },
+      { img: "right3.png", name: "Rohit", role: "Striker (CF)" },
+      { img: "right4.png", name: "Rahul", role: "Midfielder(CAM)" },
+      { img: "right5.png", name: "Deepak", role: "Vice Captain (CDM)" },
+      { img: "right6.png", name: "Hemant", role: "Midfielder (WF)" },
+      { img: "right7.png", name: "Tikam", role: "Defender (LB)" },
+      { img: "right8.png", name: "Yash", role: "Defender (CDM)" },
+      { img: "right9.png", name: "Sunny", role: "Goalkeeper (GK)" },
+      { img: "right10.png", name: "Ankit", role: "Defender (LB)" },
+      { img: "right11.png", name: "Akshu", role: "Striker (CF)" }    
+      ]
+    };
+
+    const currentIndices = { left: 0, right: 0 };
+
+    function updateImage(side) {
+      const data = imageSets[side][currentIndices[side]];
+      document.getElementById(`${side}-banner`).src = `images/${data.img}`;
+      document.getElementById(`${side}-name`).innerText = data.name;
+      document.getElementById(`${side}-role`).innerText = data.role;
+    }
+
+    function nextSlide(side) {
+      currentIndices[side] = (currentIndices[side] + 1) % imageSets[side].length;
+      updateImage(side);
+    }
+
+    function prevSlide(side) {
+      currentIndices[side] = (currentIndices[side] - 1 + imageSets[side].length) % imageSets[side].length;
+      updateImage(side);
+    }
+
+    updateImage("left");
+    updateImage("right");
+
+    setInterval(() => {
+      nextSlide("left");
+      nextSlide("right");
+    }, 4000);
+  </script>
+</body>
+</html>
+
