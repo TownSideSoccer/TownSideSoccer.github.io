@@ -46,6 +46,14 @@ footer {
   padding: 5px;
   background: white;
 }
+.hero-section h2 {
+  font-size: 2rem;
+  color: #FF6600;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00aa00;
+  display: inline-block;
+  padding-bottom: 5px;
+}
 .hero-section {
   height: 400px;
   position: relative;
