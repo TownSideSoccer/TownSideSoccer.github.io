@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Town Side Soccer Club</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-image left">
+      <img id="left-banner" src="images/left1.png" alt="Left Banner" />
+      <div class="info">
+        <div id="left-name">Coach Name</div>
+        <div id="left-role">Role</div>
+      </div>
+      <button onclick="prevSlide('left')">❮</button>
+      <button onclick="nextSlide('left')">❯</button>
+    </div>
+    <div class="club-title">
+      <img src="images/logo1.png" alt="Club Logo" class="logo-circle" />
+      <h1>Town Side Soccer Club</h1>
+      <p>Reengus, Sikar (Rajasthan)</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="training.html">Training</a>
+        <a href="events.html">Events</a>
+        <a href="join.html">Join</a>
+      </nav>
+    </div>
+    <div class="header-image right">
+      <img id="right-banner" src="images/right1.png" alt="Right Banner"/>
+      <div class="info">
+        <div id="right-name">Player Name</div>
+        <div id="right-role">Position</div>
+      </div>
+      <button onclick="prevSlide('right')">❮</button>
+      <button onclick="nextSlide('right')">❯</button>
+    </div>
+  </header>
+
+  <section class="content-section about-section">
+    <h2>About Our Club</h2>
+    <p>
+    Town Side Soccer Club (TSS Club), based in Reengus, Sikar (Rajasthan), was established with a mission to uplift grassroots football and provide world-class training to young, passionate players from town and rural areas. Our vision is to build a vibrant footballing community that nurtures talent, promotes discipline, and encourages physical and mental development through sport.
+    <br><br>
+    We believe that every child deserves the opportunity to play, grow, and compete at the highest level — regardless of their background. With a team of experienced coaches and a structured training curriculum, TSS Club focuses on skill development, teamwork, and sportsmanship. From foundational training to competitive matches and tournaments, our club offers a platform for every aspiring player to shine.
+    <br><br>
+    Our journey is powered by the values of dedication, unity, respect, and resilience. We’re more than just a football academy — we are a family committed to shaping future champions both on and off the field.
+  </p>
+  </section>
+
+  <footer>&copy; 2025 Town Side Soccer Club</footer>
+
+  <!-- Reuse the same script for sliders -->
+  <script>
+    const imageSets = {
+      left: [
+      { img: "left1.png", name: "Rakesh Yadav", role: "Head Coach" },
+      { img: "left2.png", name: "Anup Yadav", role: "Fitness Trainer" },
+      { img: "left3.png", name: "Pankaj Kumawat", role: "Asst. Coach" },
+      { img: "left4.png", name: "Mukesh Yadav", role: "Managing Director" }
+    ],
+    right: [
+      { img: "right1.png", name: "Gaurav", role: "Captain (CAM)" },
+      { img: "right2.png", name: "Deepak Jr", role: "Midfielder (WF)" },
+      { img: "right3.png", name: "Rohit", role: "Striker (CF)" },
+      { img: "right4.png", name: "Rahul", role: "Midfielder(CAM)" },
+      { img: "right5.png", name: "Deepak", role: "Vice Captain (CDM)" },
+      { img: "right6.png", name: "Hemant", role: "Midfielder (WF)" },
+      { img: "right7.png", name: "Tikam", role: "Defender (LB)" },
+      { img: "right8.png", name: "Yash", role: "Defender (CDM)" },
+      { img: "right9.png", name: "Sunny", role: "Goalkeeper (GK)" },
+      { img: "right10.png", name: "Ankit", role: "Defender (LB)" },
+      { img: "right11.png", name: "Akshu", role: "Striker (CF)" }    
+    ]
+    };
+
+    const currentIndices = { left: 0, right: 0 };
+
+    function updateImage(side) {
+      const data = imageSets[side][currentIndices[side]];
+      document.getElementById(`${side}-banner`).src = `images/${data.img}`;
+      document.getElementById(`${side}-name`).innerText = data.name;
+      document.getElementById(`${side}-role`).innerText = data.role;
+    }
+
+    function nextSlide(side) {
+      currentIndices[side] = (currentIndices[side] + 1) % imageSets[side].length;
+      updateImage(side);
+    }
+
+    function prevSlide(side) {
+      currentIndices[side] = (currentIndices[side] - 1 + imageSets[side].length) % imageSets[side].length;
+      updateImage(side);
+    }
+
+    updateImage("left");
+    updateImage("right");
+
+    setInterval(() => {
+      nextSlide("left");
+      nextSlide("right");
+    }, 4000);
+  </script>
+</body>
+</html>
